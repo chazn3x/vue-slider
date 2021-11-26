@@ -171,9 +171,15 @@ const app = new Vue({
             this.room = i;
         },
         sliderAutoplay: function() {
-            const autoplay = setInterval(function() {
-                app.room == app.categories[app.category].rooms.length -1 ? app.room = 0 : app.room++
-            }, 3000);
+            function goOn() {
+                if (app.room == app.categories[app.category].rooms.length -1) {
+                    app.room = 0;
+                    app.category == app.categories.length -1 ? app.category = 0 : app.category++
+                } else {
+                    app.room++;
+                }
+            }
+            const autoplay = setInterval(goOn, 3000);
             return autoplay;
         }
     },
