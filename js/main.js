@@ -154,7 +154,8 @@ const app = new Vue({
             }
         ],
         category: 0,
-        room: 0
+        room: 0,
+        autoplay: 0
     },
     methods: {
         categoryChange: function(i) {
@@ -170,7 +171,7 @@ const app = new Vue({
         roomChange: function(i) {
             this.room = i;
         },
-        sliderAutoplay: function() {
+        sliderPlay: function() {
             function goOn() {
                 if (app.room == app.categories[app.category].rooms.length -1) {
                     app.room = 0;
@@ -179,11 +180,13 @@ const app = new Vue({
                     app.room++;
                 }
             }
-            const autoplay = setInterval(goOn, 3000);
-            return autoplay;
+            this.autoplay = setInterval(goOn, 3000);
+        },
+        stopSlider: function() {
+            clearInterval(this.autoplay);
         }
     },
     mounted(){
-        this.sliderAutoplay();
+        this.sliderPlay();
     },
 });

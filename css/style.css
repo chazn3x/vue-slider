@@ -185,6 +185,7 @@ header nav li {
 }
 .preview img {
     object-fit: cover;
+    cursor: pointer;
 }
 .prev, .next {
     position: absolute;

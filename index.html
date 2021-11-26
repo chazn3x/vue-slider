@@ -30,7 +30,7 @@
                 <div id="showcase" class="flex my-2">
                     <div id="left-showcase" class="me-2">
                         <!-- immagine grande -->
-                        <div class="preview">
+                        <div class="preview" @mouseover="stopSlider()" @mouseleave="sliderPlay()">
                             <img class="wh-100" :src="categories[category].rooms[room].src" :alt="categories[category].rooms[room].alt">
                             <div class="prev" @click="prev(categories[category])">
                                 <i class="fas fa-chevron-left"></i>
@@ -45,7 +45,7 @@
                             <p>{{categories[category].rooms[room].text}}</p>
                         </div>
                         <!-- carosello -->
-                        <div id="carousel" class="flex">
+                        <div id="carousel" class="flex" @mouseover="stopSlider()" @mouseleave="sliderPlay()">
                             <div class="thumbnail" v-for="(item, index) in categories[category].rooms">
                                 <img class="wh-100" :src="item.src" :alt="item.alt" :class="index == room ? 'active' : ''" @click="roomChange(index)">
                             </div>
