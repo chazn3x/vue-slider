@@ -1,45 +1,66 @@
 const app = new Vue({
     el: "#root",
     data: {
-        images: [
+        categories: [
             {
-                src: 'img/usa.jpeg',
-                title: 'Stati Uniti',
-                text: "Gli Stati Uniti comprendono 50 stati e occupano una vasta area del Nord America, dall'Alaska a nord-ovest fino alle Hawaii nell'Oceano Pacifico."
+                type: "Cucine",
+                rooms: [
+                    {
+                        src: "img/kitchen/blue-kitchen.jpeg",
+                        alt: "blue kitchen",
+                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile."
+                    }
+                ]
             },
             {
-                src: 'img/japan.jpeg',
-                title: 'Giappone',
-                text: "Il Giappone è una nazione insulare nell’Oceano Pacifico con città densamente popolate, palazzi imperiali, parchi nazionali sulle montagne e migliaia di templi e santuari."
+                type: "Soggiorni",
+                rooms: [
+                    {
+                        src: "img/livingroom/livingroom-classic.jpeg",
+                        alt: "livingroom classic",
+                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile"
+                    }
+                ]
             },
             {
-                src: 'img/sweden.jpg',
-                title: 'Svezia',
-                text: "La Svezia è un paese scandinavo che comprende migliaia di isole lungo la costa e laghi nell'entroterra, oltre a vaste foreste boreali e rilievi glaciali."
+                type: "Stanze da letto",
+                rooms: [
+                    {
+                        src: "img/bedroom/double-bed-dark.jpeg",
+                        alt: "double bed dark",
+                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile"
+                    }
+                ]
             },
             {
-                src: 'img/switzerland.jpeg',
-                title: 'Svizzera',
-                text: "La Svizzera è un paese montuoso dell'Europa Centrale dove si trovano numerosi laghi, paesini e i picchi delle Alpi."
+                type: "Bagni",
+                rooms: [
+                    {
+                        src: "img/bathroom/bathroom-brown-marble.jpeg",
+                        alt: "bathroom brown marble",
+                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile"
+                    }
+                ]
             },
             {
-                src: 'img/britain.jpeg',
-                title: 'Gran Bretagna',
-                text: "La Gran Bretagna è un'isola separata dal continente europeo dal canale della Manica e dal mare del Nord. L’isola comprende le nazioni di Inghilterra, Scozia e Galles."
-            },
-            {
-                src: 'img/germany.jpeg',
-                title: 'Germania',
-                text: "La Germania è un Paese dell'Europa Occidentale con oltre due millenni di storia e un paesaggio caratterizzato da foreste, fiumi, catene montuose e spiagge affacciate sul Mare del Nord."
-            },
-            {
-                src: 'img/hawaii.jpeg',
-                title: 'Hawaii',
-                text: "Le Hawaii, uno stato degli USA, sono un arcipelago vulcanico isolato nel Pacifico centrale."
+                type: "Spazi aperti",
+                rooms: [
+                    {
+                        src: "img/open-space/open-space.jpeg",
+                        alt: "open space",
+                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile"
+                    }
+                ]
             }
-        ]
+        ],
+        category: 0,
+        room: 0
     },
     methods: {
+        categoryChange: function(i) {
+            this.category = i;
+            this.room = 0;
+        }
 
     }
 });

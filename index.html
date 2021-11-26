@@ -9,39 +9,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <div id="root">
-        <!-- sfondo -->
-        <div class="background"></div>
+        <!-- header -->
+        <header>
+            <nav id="menu" class="container py-1">
+                <ul class="flex-center text-center">
+                    <li v-for="(item, index) in categories">
+                        <a href="#" class="btn mx-1" :class="index == category ? 'active' : ''" @click="categoryChange(index)">{{item.type}}</a href="#">
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- main -->
+        <main class="container">
+            <!-- titolo -->
+            <h1 class="py-1 f-3">Le nostre stanze</h1>
+            <div>
+                <!-- gallery title -->
+                <h2 class="f-2">{{categories[category].type}}</h2>
+                <div id="showcase" class="flex my-2">
+                    <div id="left-showcase" class="me-2">
+                        <!-- immagine grande -->
+                        <div class="preview">
+                            <img class="wh-100" :src="categories[category].rooms[room].src" :alt="categories[category].rooms[room].alt">
+                        </div>
+                    </div>
+                    <div id="right-showcase" class="ms-2">
+                        <div id="description">
+                            <p>{{categories[category].rooms[room].text}}</p>
+                        </div>
+                        <div id="carousel">
+                            
+                        </div>
+                    </div>
+                </div>
     
-        <!-- titolo -->
-        <h1>Esplora posti magnifici e lasciati ispirare per il tuo prossimo viaggio</h1>
-        
-        <!-- contenitore -->
-        <div class="container">
-            <!-- contenitore immagine -->
-            <div class="image-container">
-                <div class="previous">
-                    <i class="fas fa-chevron-left"></i>
-                </div>
-                <div class="next">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="dots">
-                    <!-- inserimento pallini con javascript -->
-                </div>
-                <!-- inserimento immagini con javascript -->
             </div>
-            <!-- contenitore carosello -->
-            <div class="carousel-container">
-                <!-- carosello -->
-                <div class="carousel">
-                    <!-- inserimento immagini con javascript -->
-                </div>
-            </div>
-        </div>
-    </div>
 
+        </main>
+    </div>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/main.js"></script>
