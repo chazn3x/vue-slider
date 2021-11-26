@@ -163,21 +163,31 @@ const app = new Vue({
             this.room = 0;
         },
         next: function(i) {
-            this.room == i.rooms.length -1 ? this.room = 0 : this.room++
+            if (this.room == i.rooms.length -1) {
+                this.room = 0;
+                this.category == this.categories.length -1 ? this.category = 0 : this.category++
+            } else {
+                this.room++;
+            }
         },
         prev: function(i) {
-            this.room == 0 ? this.room = i.rooms.length -1 : this.room--
+            if (this.room == 0) {
+                this.room = i.rooms.length -1;
+                this.category == 0 ? this.category = this.categories.length -1 : this.category--
+            } else {
+                this.room--;
+            }
         },
         roomChange: function(i) {
             this.room = i;
         },
         sliderPlay: function() {
-            function goOn() {
-                if (app.room == app.categories[app.category].rooms.length -1) {
-                    app.room = 0;
-                    app.category == app.categories.length -1 ? app.category = 0 : app.category++
+            const goOn = () => {
+                if (this.room == this.categories[this.category].rooms.length -1) {
+                    this.room = 0;
+                    this.category == this.categories.length -1 ? this.category = 0 : this.category++
                 } else {
-                    app.room++;
+                    this.room++;
                 }
             }
             this.autoplay = setInterval(goOn, 3000);

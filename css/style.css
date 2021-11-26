@@ -9,6 +9,8 @@
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
     color: var(--primary);
+    user-select: none;
+    -webkit-user-select: none;
 }
 li {
     list-style: none;
