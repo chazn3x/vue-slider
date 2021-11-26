@@ -155,7 +155,9 @@ const app = new Vue({
         ],
         category: 0,
         room: 0,
-        autoplay: 0
+        autoplay: 0,
+        progBar: 0,
+        tProgress: 0
     },
     methods: {
         categoryChange: function(i) {
@@ -182,18 +184,31 @@ const app = new Vue({
             this.room = i;
         },
         sliderPlay: function() {
-            const goOn = () => {
+            const play = () => {
                 if (this.room == this.categories[this.category].rooms.length -1) {
                     this.room = 0;
                     this.category == this.categories.length -1 ? this.category = 0 : this.category++
                 } else {
                     this.room++;
                 }
+                this.tProgress = 0;
             }
-            this.autoplay = setInterval(goOn, 3000);
+            this.autoplay = setInterval(play, 4000);
+            this.progressBar();
         },
         sliderStop: function() {
             clearInterval(this.autoplay);
+            clearInterval(this.progBar);
+            this.tProgress = 0;
+        },
+        progressBar: function() {
+            const t = 100 / 328;
+            const bar = () => {
+                this.tProgress = this.tProgress + t;
+                document.querySelector(".progress-bar").style.width = this.tProgress + "%";
+                console.log(this.tProgress);
+            }
+            this.progBar = setInterval(bar, 10);
         }
     },
     mounted(){

@@ -26,22 +26,23 @@
             <h1 class="py-1 f-3">Le nostre stanze</h1>
             <div>
                 <!-- gallery title -->
-                <h2 class="f-2">{{categories[category].type}}</h2>
+                <h2>{{categories[category].type}}</h2>
                 <div id="showcase" class="flex my-2">
                     <div id="left-showcase" class="me-2">
                         <!-- immagine grande -->
                         <div class="preview" @mouseover="sliderStop()" @mouseleave="sliderPlay()">
-                            <img class="wh-100" :src="categories[category].rooms[room].src" :alt="categories[category].rooms[room].alt">
+                            <img id="preview" class="wh-100" :src="categories[category].rooms[room].src" :alt="categories[category].rooms[room].alt">
                             <div class="prev" @click="prev(categories[category])">
                                 <i class="fas fa-chevron-left"></i>
                             </div>
                             <div class="next" @click="next(categories[category])">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
+                            <div class="progress-bar"></div>
                         </div>
                     </div>
                     <div id="right-showcase" class="ms-2 flex">
-                        <div id="description">
+                        <div id="description" class="flex p-1">
                             <p>{{categories[category].rooms[room].text}}</p>
                         </div>
                         <!-- carosello -->
