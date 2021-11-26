@@ -32,14 +32,20 @@
                         <!-- immagine grande -->
                         <div class="preview">
                             <img class="wh-100" :src="categories[category].rooms[room].src" :alt="categories[category].rooms[room].alt">
+                            <div class="prev" @click="prev(categories[category])">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="next" @click="next(categories[category])">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
                         </div>
                     </div>
-                    <div id="right-showcase" class="ms-2">
+                    <div id="right-showcase" class="ms-2 flex">
                         <div id="description">
                             <p>{{categories[category].rooms[room].text}}</p>
                         </div>
                         <div id="carousel">
-                            
+
                         </div>
                     </div>
                 </div>
