@@ -17,6 +17,9 @@ a {
     text-decoration: none;
     color: var(--primary);
 }
+img {
+    display: block;
+}
 h1 {
     font-weight: 100;
     text-transform: capitalize;
@@ -209,9 +212,32 @@ header nav li {
 }
 
 #description {
-    flex: 1;
+    height: 50%;
 }
 #carousel {
-    flex: 1;
-    background: #000;
+    height: 50%;
+    background: #0002;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+#carousel .thumbnail {
+    width: 25%;
+    height: 50%;
+}
+#carousel img {
+    object-fit: cover;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    opacity: .5;
+    cursor: pointer;
+}
+#carousel img:hover {
+    opacity: 1;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+}
+#carousel img.active {
+    opacity: 1;
+    filter: blur(0);
+    -webkit-filter: blur(0);
 }

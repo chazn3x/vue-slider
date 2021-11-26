@@ -44,8 +44,10 @@
                         <div id="description">
                             <p>{{categories[category].rooms[room].text}}</p>
                         </div>
-                        <div id="carousel">
-
+                        <div id="carousel" class="flex">
+                            <div class="thumbnail" v-for="(item, index) in categories[category].rooms">
+                                <img class="wh-100" :src="item.src" :alt="item.alt" :class="index == room ? 'active' : ''" @click="roomChange(index)">
+                            </div>
                         </div>
                     </div>
                 </div>

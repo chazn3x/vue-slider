@@ -18,17 +18,17 @@ const app = new Vue({
                     {
                         src: "img/kitchen/modern-wooden-kitchen.jpeg",
                         alt: "modern wooden kitchen",
-                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile."
+                        text: "Design moderno accompagnato dal calore del legno: minimal quanto basta."
                     },
                     {
                         src: "img/kitchen/simple-kitchen.jpeg",
                         alt: "simple kitchen",
-                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile."
+                        text: "Uno spazio cucina ampio e luminoso che con il suo design regala un giusto equilibrio fra le forme."
                     },
                     {
                         src: "img/kitchen/dark-kitchen.jpeg",
                         alt: "dark kitchen",
-                        text: "Una classica cucina ad angolo per donare vivacità alle vostre giornate con il suo colore indistinguibile."
+                        text: "A volte basta anche il minimo indispensabile per preparare ottimi piatti."
                     }
                 ]
             },
@@ -38,27 +38,27 @@ const app = new Vue({
                     {
                         src: "img/livingroom/livingroom-classic.jpeg",
                         alt: "livingroom classic",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
                     },
                     {
                         src: "img/livingroom/livingroom-grey.jpeg",
                         alt: "livingroom grey",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/livingroom/livingroom-parquet.jpeg",
                         alt: "livingroom parquet",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/livingroom/livingroom-small.jpeg",
                         alt: "livingroom small",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/livingroom/livingroom-window.jpeg",
                         alt: "livingroom window",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa?"
                     }
                 ]
             },
@@ -68,27 +68,27 @@ const app = new Vue({
                     {
                         src: "img/bedroom/double-bed-dark.jpeg",
                         alt: "double bed dark",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
                     },
                     {
                         src: "img/bedroom/double-bed-light.jpeg",
                         alt: "double bed light",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/bedroom/double-bed-spacious.jpeg",
                         alt: "double bed spacious",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/bedroom/single-bed.jpeg",
                         alt: "single bed",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/bedroom/two-single-bed.jpeg",
                         alt: "two single bed",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa?"
                     }
                 ]
             },
@@ -98,27 +98,27 @@ const app = new Vue({
                     {
                         src: "img/bathroom/bathroom-brown-marble.jpeg",
                         alt: "bathroom brown marble",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
                     },
                     {
                         src: "img/bathroom/bathroom-classic-design.jpeg",
                         alt: "bathroom classic design",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/bathroom/bathroom-round-bath.jpeg",
                         alt: "bathroom round bath",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/bathroom/bathroom-grey-marble.jpeg",
                         alt: "bathroom grey marble",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/bathroom/bathroom-square-tiles.jpeg",
                         alt: "bathroom square tiles",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa?"
                     }
                 ]
             },
@@ -128,27 +128,27 @@ const app = new Vue({
                     {
                         src: "img/open-space/open-space.jpeg",
                         alt: "open space",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
                     },
                     {
                         src: "img/open-space/kitchen-blue-island.jpeg",
                         alt: "kitchen blue island",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/open-space/kitchen-island-two-lights.jpeg",
                         alt: "kitchen island two lights",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/open-space/open-space-parquet.jpeg",
                         alt: "open space parquet",
-                        text: ""
+                        text: "Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa? Ab deserunt culpa in eius error recusandae autem?"
                     },
                     {
                         src: "img/open-space/wooden-island-kitchen.jpeg",
                         alt: "wooden island kitchen",
-                        text: ""
+                        text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores veritatis libero facilis nostrum neque numquam velit, tenetur, eaque minima consequatur, iste ipsa?"
                     }
                 ]
             }
@@ -166,6 +166,9 @@ const app = new Vue({
         },
         prev: function(categoryShown) {
             this.room == 0 ? this.room = categoryShown.rooms.length -1 : this.room--
+        },
+        roomChange: function(i) {
+            this.room = i;
         }
     }
 });
