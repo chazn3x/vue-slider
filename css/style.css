@@ -182,10 +182,17 @@ header nav li {
     width: 100%;
     aspect-ratio: 16 / 9;
     position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 2rem #0002;
+    border-radius: .5rem;
 }
 .preview img {
     object-fit: cover;
     cursor: pointer;
+    transition: scale 1s;
+}
+.preview:hover img {
+    scale: 1.05;
 }
 .prev, .next {
     position: absolute;
@@ -219,7 +226,9 @@ header nav li {
     height: 50%;
     background: #0002;
     flex-wrap: wrap;
-    overflow: hidden;
+    overflow-y: auto;
+    box-shadow: 0 0 2rem #0002;
+    border-radius: .5rem;
 }
 #carousel .thumbnail {
     width: 25%;
@@ -231,6 +240,7 @@ header nav li {
     -webkit-filter: blur(1px);
     opacity: .5;
     cursor: pointer;
+    transition: 300ms;
 }
 #carousel img:hover {
     opacity: 1;

@@ -182,7 +182,7 @@ const app = new Vue({
             }
             this.autoplay = setInterval(goOn, 3000);
         },
-        stopSlider: function() {
+        sliderStop: function() {
             clearInterval(this.autoplay);
         }
     },
