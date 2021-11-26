@@ -161,14 +161,23 @@ const app = new Vue({
             this.category = i;
             this.room = 0;
         },
-        next: function(categoryShown) {
-            this.room == categoryShown.rooms.length -1 ? this.room = 0 : this.room++
+        next: function(i) {
+            this.room == i.rooms.length -1 ? this.room = 0 : this.room++
         },
-        prev: function(categoryShown) {
-            this.room == 0 ? this.room = categoryShown.rooms.length -1 : this.room--
+        prev: function(i) {
+            this.room == 0 ? this.room = i.rooms.length -1 : this.room--
         },
         roomChange: function(i) {
             this.room = i;
+        },
+        sliderAutoplay: function() {
+            const autoplay = setInterval(function() {
+                app.room == app.categories[app.category].rooms.length -1 ? app.room = 0 : app.room++
+            }, 3000);
+            return autoplay;
         }
-    }
+    },
+    mounted(){
+        this.sliderAutoplay();
+    },
 });
