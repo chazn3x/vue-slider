@@ -15,7 +15,7 @@
             <nav id="menu" class="container py-1">
                 <ul class="flex-center text-center">
                     <li v-for="(item, i) in categories">
-                        <a href="#" class="btn mx-1" :class="i == catIndex ? 'active' : ''" @click="categoryChange(i)">{{item.type}}</a>
+                        <a href="#" class="btn mx-1" :class="i == catIndex ? 'active' : ''" @click="categoryChange(i)" @click.prevent>{{item.type}}</a>
                     </li>
                 </ul>
             </nav>
