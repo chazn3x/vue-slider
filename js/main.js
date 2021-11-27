@@ -194,7 +194,6 @@ const app = new Vue({
                     this.progressBarLenght = 0;
                     this.next(this.categories[this.catIndex]);
                 }
-                document.querySelector(".progress-bar").style.width = this.progressBarLenght + "%";
             }
             this.progBar = setInterval(bar, 1);
         },
