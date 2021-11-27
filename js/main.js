@@ -163,6 +163,8 @@ const app = new Vue({
         categoryChange: function(i) {
             this.category = i;
             this.room = 0;
+            this.sliderStop();
+            this.sliderPlay();
         },
         next: function(i) {
             if (this.room == i.rooms.length -1) {
@@ -184,6 +186,7 @@ const app = new Vue({
             this.room = i;
         },
         sliderPlay: function() {
+            this.sliderStop();
             const play = () => {
                 if (this.room == this.categories[this.category].rooms.length -1) {
                     this.room = 0;
