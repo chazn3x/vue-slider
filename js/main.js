@@ -155,13 +155,13 @@ const app = new Vue({
         ],
         catIndex: 0,
         roomIndex: 0,
-        progressBarLenght: 0
+        progressBarLength: 0
     },
     methods: {
         categoryChange: function(i) {
             this.catIndex = i;
             this.roomIndex = 0;
-            this.progressBarLenght = 0;
+            this.progressBarLength = 0;
         },
         next: function() {
             if (this.roomIndex == this.categories[this.catIndex].rooms.length -1) {
@@ -170,7 +170,7 @@ const app = new Vue({
             } else {
                 this.roomIndex++;
             }
-            this.progressBarLenght = 0;
+            this.progressBarLength = 0;
         },
         prev: function() {
             if (this.roomIndex == 0) {
@@ -179,19 +179,19 @@ const app = new Vue({
             } else {
                 this.roomIndex--;
             }
-            this.progressBarLenght = 0;
+            this.progressBarLength = 0;
         },
         roomChange: function(i) {
             this.roomIndex = i;
-            this.progressBarLenght = 0;
+            this.progressBarLength = 0;
         },
         sliderPlay: function() {
             const t = 0.1;
             const bar = () => {
-                if (this.progressBarLenght < 100) {
-                    this.progressBarLenght = this.progressBarLenght + t;
+                if (this.progressBarLength < 100) {
+                    this.progressBarLength = this.progressBarLength + t;
                 } else {
-                    this.progressBarLenght = 0;
+                    this.progressBarLength = 0;
                     this.next(this.categories[this.catIndex]);
                 }
             }
