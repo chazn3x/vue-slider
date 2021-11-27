@@ -153,64 +153,53 @@ const app = new Vue({
                 ]
             }
         ],
-        category: 0,
-        room: 0,
-        autoplay: 0,
-        progBar: 0,
-        tProgress: 0
+        catIndex: 0,
+        roomIndex: 0,
+        progressBarLenght: 0
     },
     methods: {
         categoryChange: function(i) {
-            this.category = i;
-            this.room = 0;
-            this.sliderStop();
-            this.sliderPlay();
+            this.catIndex = i;
+            this.roomIndex = 0;
+            this.progressBarLenght = 0;
         },
-        next: function(i) {
-            if (this.room == i.rooms.length -1) {
-                this.room = 0;
-                this.category == this.categories.length -1 ? this.category = 0 : this.category++
+        next: function() {
+            if (this.roomIndex == this.categories[this.catIndex].rooms.length -1) {
+                this.roomIndex = 0;
+                this.catIndex == this.categories.length -1 ? this.catIndex = 0 : this.catIndex++
             } else {
-                this.room++;
+                this.roomIndex++;
             }
+            this.progressBarLenght = 0;
         },
-        prev: function(i) {
-            if (this.room == 0) {
-                this.room = i.rooms.length -1;
-                this.category == 0 ? this.category = this.categories.length -1 : this.category--
+        prev: function() {
+            if (this.roomIndex == 0) {
+                this.roomIndex = this.categories[this.catIndex].rooms.length -1;
+                this.catIndex == 0 ? this.catIndex = this.categories.length -1 : this.catIndex--
             } else {
-                this.room--;
+                this.roomIndex--;
             }
+            this.progressBarLenght = 0;
         },
         roomChange: function(i) {
-            this.room = i;
+            this.roomIndex = i;
+            this.progressBarLenght = 0;
         },
         sliderPlay: function() {
-            this.sliderStop();
-            const play = () => {
-                if (this.room == this.categories[this.category].rooms.length -1) {
-                    this.room = 0;
-                    this.category == this.categories.length -1 ? this.category = 0 : this.category++
+            const t = 0.1;
+            const bar = () => {
+                if (this.progressBarLenght < 100) {
+                    this.progressBarLenght = this.progressBarLenght + t;
                 } else {
-                    this.room++;
+                    this.progressBarLenght = 0;
+                    this.next(this.categories[this.catIndex]);
                 }
-                this.tProgress = 0;
+                document.querySelector(".progress-bar").style.width = this.progressBarLenght + "%";
             }
-            this.autoplay = setInterval(play, 4000);
-            this.progressBar();
+            this.progBar = setInterval(bar, 1);
         },
         sliderStop: function() {
-            clearInterval(this.autoplay);
             clearInterval(this.progBar);
-            this.tProgress = 0;
-        },
-        progressBar: function() {
-            const t = 100 / 650;
-            const bar = () => {
-                this.tProgress = this.tProgress + t;
-                document.querySelector(".progress-bar").style.width = this.tProgress + "%";
-            }
-            this.progBar = setInterval(bar, 5);
         }
     },
     mounted(){

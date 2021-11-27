@@ -14,8 +14,8 @@
         <header>
             <nav id="menu" class="container py-1">
                 <ul class="flex-center text-center">
-                    <li v-for="(item, index) in categories">
-                        <a href="#" class="btn mx-1" :class="index == category ? 'active' : ''" @click="categoryChange(index)">{{item.type}}</a>
+                    <li v-for="(item, i) in categories">
+                        <a href="#" class="btn mx-1" :class="i == catIndex ? 'active' : ''" @click="categoryChange(i)">{{item.type}}</a>
                     </li>
                 </ul>
             </nav>
@@ -26,16 +26,16 @@
             <h1 class="py-1 f-3">Le nostre stanze</h1>
             <div>
                 <!-- gallery title -->
-                <h2>{{categories[category].type}}</h2>
+                <h2>{{categories[catIndex].type}}</h2>
                 <div id="showcase" class="flex my-2">
                     <div id="left-showcase" class="me-2">
                         <!-- immagine grande -->
                         <div class="preview" @mouseover="sliderStop()" @mouseleave="sliderPlay()">
-                            <img id="preview" class="wh-100" :src="categories[category].rooms[room].src" :alt="categories[category].rooms[room].alt">
-                            <div class="prev" @click="prev(categories[category])">
+                            <img id="preview" class="wh-100" :src="categories[catIndex].rooms[roomIndex].src" :alt="categories[catIndex].rooms[roomIndex].alt">
+                            <div class="prev" @click="prev()">
                                 <i class="fas fa-chevron-left"></i>
                             </div>
-                            <div class="next" @click="next(categories[category])">
+                            <div class="next" @click="next()">
                                 <i class="fas fa-chevron-right"></i>
                             </div>
                             <div class="progress-bar"></div>
@@ -43,12 +43,12 @@
                     </div>
                     <div id="right-showcase" class="ms-2 flex" @mouseover="sliderStop()" @mouseleave="sliderPlay()">
                         <div id="description" class="flex p-1">
-                            <p>{{categories[category].rooms[room].text}}</p>
+                            <p>{{categories[catIndex].rooms[roomIndex].text}}</p>
                         </div>
                         <!-- carosello -->
                         <div id="carousel" class="flex">
-                            <div class="thumbnail" v-for="(item, index) in categories[category].rooms">
-                                <img class="wh-100" :src="item.src" :alt="item.alt" :class="index == room ? 'active' : ''" @click="roomChange(index)">
+                            <div class="thumbnail" v-for="(item, i) in categories[catIndex].rooms">
+                                <img class="wh-100" :src="item.src" :alt="item.alt" :class="i == roomIndex ? 'active' : ''" @click="roomChange(i)">
                             </div>
                         </div>
                     </div>
