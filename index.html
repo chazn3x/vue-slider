@@ -41,12 +41,12 @@
                             <div class="progress-bar"></div>
                         </div>
                     </div>
-                    <div id="right-showcase" class="ms-2 flex">
+                    <div id="right-showcase" class="ms-2 flex" @mouseover="sliderStop()" @mouseleave="sliderPlay()">
                         <div id="description" class="flex p-1">
                             <p>{{categories[category].rooms[room].text}}</p>
                         </div>
                         <!-- carosello -->
-                        <div id="carousel" class="flex" @mouseover="sliderStop()" @mouseleave="sliderPlay()">
+                        <div id="carousel" class="flex">
                             <div class="thumbnail" v-for="(item, index) in categories[category].rooms">
                                 <img class="wh-100" :src="item.src" :alt="item.alt" :class="index == room ? 'active' : ''" @click="roomChange(index)">
                             </div>

@@ -169,6 +169,8 @@ header {
     background: white;
     border-bottom: .5px solid #0003;
     box-shadow: 0 0 1rem #0002;
+    position: fixed;
+    width: 100%;
 }
 header nav a {
     position: relative;
@@ -194,6 +196,9 @@ header nav li {
 }
 
 /* main */
+main {
+    padding-top: 80px;
+}
 #left-showcase {
     flex: 2;
 }
