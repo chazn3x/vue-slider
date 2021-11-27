@@ -202,13 +202,12 @@ const app = new Vue({
             this.tProgress = 0;
         },
         progressBar: function() {
-            const t = 100 / 328;
+            const t = 100 / 650;
             const bar = () => {
                 this.tProgress = this.tProgress + t;
                 document.querySelector(".progress-bar").style.width = this.tProgress + "%";
-                console.log(this.tProgress);
             }
-            this.progBar = setInterval(bar, 10);
+            this.progBar = setInterval(bar, 5);
         }
     },
     mounted(){
