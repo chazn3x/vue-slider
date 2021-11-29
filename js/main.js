@@ -192,7 +192,7 @@ const app = new Vue({
                     this.progressBarLength = this.progressBarLength + t;
                 } else {
                     this.progressBarLength = 0;
-                    this.next(this.categories[this.catIndex]);
+                    this.next();
                 }
             }
             this.progBar = setInterval(bar, 1);
